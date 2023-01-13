@@ -4,6 +4,7 @@ var click = document.querySelector('#click');
 var multiply = document.querySelector('#multiply');
 var autoclick = document.querySelector('#autoclick');
 var bonus = document.querySelector('#bonus');
+var bonusTimer = document.querySelector('#bonustimer')
 var bonusInter= document.querySelector('#bonus1');
 var bonusPour = document.querySelector('#bonus2');
 var bonus3 = document.querySelector('#bonus3');
@@ -13,12 +14,12 @@ var pAutoclick = document.querySelector('#pautoclick');
 var pClick = document.querySelector('#pclick')
 
 // Coûts pour les différentes actions
-var multiplierCost = 50;
-var autoclickCost = 20;
+var multiplierCost = 10;
+var autoclickCost = 10;
 var bonusCost = 10;
-var bonusInterCost = 100;
-var bonusPourCost = 100;
-var bonus3Cost = 100;
+var bonusInterCost = 10;
+var bonusPourCost = 10;
+var bonus3Cost = 10;
 // Variables pour vérifier si les fonctionnalités de Autoclick et Bonus sont activées
 var autoclickOn = false;
 var bonusOn = false;
@@ -34,9 +35,6 @@ var score = 0;
 var clickValue = 1;
 var multiplier = 1;
 var bonusTime = 30;
-
-var pourcentageVal = 50;
-
 
 // Fonction pour mettre à jour l'affichage du score
 function displayScore() {
@@ -60,7 +58,7 @@ function displayBonus() {
 
 // Fonction pour mettre à jour l'affichage du temps de bonus
 function displayBonusTime() {
-  pBonus.innerText = 'Bonus (temps : ' + bonusTime + ' sec)';
+  bonusTimer.innerText = 'Bonus (temps : ' + bonusTime + ' sec)';
 }
 // Fonction pour mettre à jour l'affichage du bonus inter
 function displayBonusInter() {
@@ -158,7 +156,7 @@ function buttonsEnabler() {
   if (bonusOn) {
   clickValue *= 2;
   }
-  multiplierCost *= 3;
+  multiplierCost *= 1;
   buttonsEnabler();
   displayScore();
   displayMultiplier();
@@ -186,7 +184,6 @@ function buttonsEnabler() {
   clickValue *= 2;
   bonus.disabled = true;
   displayScore();
-  displayBonusTime();
   }
   
   // Fonction pour désactiver la fonctionnalité Bonus lorsque le temps de bonus est écoulé
@@ -217,7 +214,7 @@ function buttonsEnabler() {
     }
     bonusInter.disabled = true;
     score -= bonusInterCost;
-    bonusInterCost *= 5;
+    bonusInterCost *= 1;
     buttonsEnabler();
     displayScore();
     displayBonusInter(); 
@@ -231,7 +228,7 @@ function buttonsEnabler() {
     }
     score -= bonusPourCost;
     bonusPour.disabled = true;
-    bonusPourCost *= 3;
+    bonusPourCost *= 1;
     displayScore();
     buttonsEnabler();
     displayBonusPour(); 
@@ -256,6 +253,7 @@ function buttonsEnabler() {
   displayBonusPour();
   displayBonus3();
   buttonsEnabler();
+  displayBonusTime();
   multiply.disabled = true;
   autoclick.disabled = true;
   bonus.disabled = true;
