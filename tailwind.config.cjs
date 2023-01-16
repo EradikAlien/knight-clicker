@@ -38,6 +38,7 @@ module.exports = {
           '50%': {left:'100px'},
           '100%': {left:'0px'},
         }
+
       },
 
       animation: {
