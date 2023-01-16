@@ -11,12 +11,6 @@ module.exports = {
   theme: {
     extend: {
 
-      animation: { 
-        'skull': 'skull 2s', 
-        'waving-hand': 'wave 2s linear infinite',
-        'fading': 'fade 4s forwards',
-      },
-
       keyframes: {
       skull: {
         '0%' : { transform: 'translateY(500%)', opacity: '0%' },
@@ -50,6 +44,7 @@ module.exports = {
         'waving-hand': 'wave 2s linear infinite',
         'fading': 'fade 4s forwards',
         'sliding': 'slide 4s linear infinite',
+        'skull': 'skull 2s',
       },
 
     },
