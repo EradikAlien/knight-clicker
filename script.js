@@ -25,7 +25,7 @@ var autoclickCost = 50;
 var bonusCost = 100;
 var bonusInterCost = 200;
 var bonusPourCost = 100;
-var bonus3Cost = 300;
+var bonus3Cost = 30;
 var depense = 0;
 
 // Variables pour vérifier si les fonctionnalités de Autoclick et Bonus sont activées
@@ -316,8 +316,8 @@ function buttonsEnabler() {
   // Fonction pour activer la fonctionnalité Bonus lorsque le bouton "Bonus3" est pressé
   function Bonus3() {
     
-    let bonusMalus = (Math.floor(Math.random() * 10));
-    
+    let bonusMalus =6 ;
+    (Math.floor(Math.random() * 10))
     console.log(bonusMalus)
     
     depense += bonus3Cost;
@@ -325,9 +325,9 @@ function buttonsEnabler() {
       else if(bonusMalus > 1 && bonusMalus <= 3) { score += bonus3Cost; scoreBonus3 = (score *= 1.25); displayNotif2()}        
       else if(bonusMalus > 3 && bonusMalus <= 5) { score += bonus3Cost; scoreBonus3 = (score *= 1.15); displayNotif3()}
       else if(bonusMalus > 5 && bonusMalus <=7) {
-        if(score <= bonus3Cost) { score += bonus3Cost; score = 0; displayNotif4()}
-        else if (score > bonus3Cost) { score += bonus3Cost; score *= 0.5; displayNotif5()}}
-      else if(bonusMalus > 7 && bonusMalus <=9) { score += bonus3Cost; score = 0; displayNotif4()}
+        if(score <= bonus3Cost) { score = 0; displayNotif4();score += bonus3Cost}
+        else if (score > bonus3Cost) { score /= 2; displayNotif5();score += bonus3Cost}}
+      else if(bonusMalus > 7 && bonusMalus <=9) { score = 0; displayNotif4();score += bonus3Cost}
       else {displayNotif6()}
     score -= bonus3Cost;
     bonus3.disabled = true;
