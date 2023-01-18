@@ -25,7 +25,7 @@ var autoclickCost = 50;
 var bonusCost = 100;
 var bonusInterCost = 200;
 var bonusPourCost = 100;
-var bonus3Cost = 30;
+var bonus3Cost = 300;
 var depense = 0;
 
 // Variables pour vérifier si les fonctionnalités de Autoclick et Bonus sont activées
