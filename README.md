@@ -25,13 +25,10 @@
 
 
 <!-- ROADMAP -->
-#### DevTeam
+#### Dev
 
 * <a href="https://github.com/EradikAlien">Laurent</a>
 
-#### DevTeam
-
-* <a href="https://github.com/EradikAlien">Laurent</a>
 
 
 #### Develop
