@@ -8,7 +8,7 @@
   <h3 class ="text-center" >Knight-Clicker</h3>
 
   <p text-align="center">
-     Exercise en équipe à Becode pour mieux comprendre du Javascript, Tailwind et la logique d'un Cookie-Clicker      
+     Exercice dans le cadre de la formation Becode (Web Dev) pour mieux comprendre et associer du Javascript, Tailwind et la logique en créant un Cookie-Clicker.      
   </p>
   <a text-align="center" href=https://eradikalien.github.io/knight-clicker/>LIVE-PAGE</a>
 
